@@ -1,10 +1,16 @@
 import "../App.css";
+import AddTaskForm from "../components/AddTaskForm";
 import Header from "../components/Header";
+import TaskList from "../components/TaskList";
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <div className="min-h-screen bg-black text-white p-4">
+        <Header />
+        <AddTaskForm />
+        <TaskList />
+      </div>
     </>
   );
 }
