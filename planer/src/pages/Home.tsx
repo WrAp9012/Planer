@@ -15,12 +15,16 @@ import TaskList from "../components/TaskList";
  */
 export default function Home() {
   return (
-    <>
-      <div className="min-h-screen bg-black text-white p-4">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white flex items-center justify-center px-4">
+      <div className="w-full max-w-3xl bg-gray-950/60 rounded-2xl shadow-xl p-6 backdrop-blur-md border border-white/10">
         <Header />
-        <AddTaskForm />
-        <TaskList />
+        <div className="mt-6">
+          <AddTaskForm />
+        </div>
+        <div className="mt-6">
+          <TaskList />
+        </div>
       </div>
-    </>
+    </div>
   );
 }

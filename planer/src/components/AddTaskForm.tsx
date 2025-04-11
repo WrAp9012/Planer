@@ -26,6 +26,11 @@ export default function AddTaskForm() {
    */
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(taskTitle);
+    console.log(taskBody);
+
+    setTaskTitle("");
+    setTaskBody("");
   };
 
   return (

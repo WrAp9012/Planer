@@ -20,17 +20,19 @@ export default function Header() {
   // };
   return (
     <>
-      <div className="bg-gradient-to-r from-purple-600 to-blue-500 py-8 text-center">
-        <h1 className="text-2xl md:text-4xl font-bold text-white drop-shadow-md">
-          Twój najlepszy planer
-        </h1>
-        <p className="mt-3 text-base md:text-lg text-white/80">
-          Dodaj nowe zadanie
-        </p>
-        {/* <button className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:bg-indigo-700 hover:scale-105 transition-all duration-300">
+      <header className="bg-gradient-to-r from-purple-600 to-blue-500 py-12 px-4 text-center shadow-lg relative overflow-hidden">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg tracking-tight hover:tracking-wide transition-all duration-500">
+            🌟 Twój najlepszy planer
+          </h1>
+          <p className="mt-4 text-base md:text-xl text-white/90">
+            Zarządzaj swoim czasem jak mistrz 🧠
+          </p>
+          {/* <button className="mt-6 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:bg-indigo-700 hover:scale-105 transition-all duration-300">
           Zmień kolor tła 🎨
         </button> */}
-      </div>
+        </div>
+      </header>
     </>
   );
 }

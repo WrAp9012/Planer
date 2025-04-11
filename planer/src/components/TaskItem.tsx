@@ -32,14 +32,18 @@ export default function TaskItem({ id, title, body, isDone }: task) {
     <>
       <div
         id={`item-card-${id}`}
-        className={`rounded-2xl shadow-lg p-6 mb-6 transition-all duration-300 border ${
+        className={`rounded-2xl shadow-lg p-6 mb-6 border transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group
+        ${
           isDone ? "bg-green-50 border-green-400" : "bg-red-50 border-red-300"
         }`}
       >
-        <h2 className="text-xl font-bold mb-2 text-gray-800">{title}</h2>
-        <p className="text-gray-700 mb-4">{body}</p>
+        <h2 className="text-2xl font-extrabold mb-2 text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
+          {title}
+        </h2>
+        <p className="text-gray-800 mb-4 leading-relaxed">{body}</p>
         <span
-          className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
+          className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-300
+          ${
             isDone ? "bg-green-200 text-green-800" : "bg-red-200 text-red-800"
           }`}
         >

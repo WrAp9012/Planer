@@ -16,8 +16,11 @@ import TaskItem from "./TaskItem";
 export default function TaskList() {
   return (
     <>
-      <main>
-        <div id="task-list">
+      <main className="px-4 py-10 md:py-14 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div
+          id="task-list"
+          className="max-w-4xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2"
+        >
           {sampleData.map((item) => (
             <TaskItem
               key={item.id}
