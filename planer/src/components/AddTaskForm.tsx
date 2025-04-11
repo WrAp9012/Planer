@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../App.css";
 
+// TODO: Fix the bugs with getting data from user.
 /**
  * Komponent `AddTaskForm` wyświetla formularz umożliwiający użytkownikowi
  * dodanie nowego zadania i opcjonalnego opisu. Dane nie są jeszcze podpinane
