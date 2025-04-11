@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../App.css";
 
+// TODO: Return do some way the data from user (Add the new list item)
 /**
  * Komponent `AddTaskForm` wyświetla formularz umożliwiający użytkownikowi
  * dodanie nowego zadania i opcjonalnego opisu. Dane nie są jeszcze podpinane
@@ -25,9 +26,6 @@ export default function AddTaskForm() {
    */
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    console.log(taskTitle);
-    console.log(taskBody);
   };
 
   return (
