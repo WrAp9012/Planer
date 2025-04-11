@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../App.css";
 
-// TODO: Fix the bugs with getting data from user.
 /**
  * Komponent `AddTaskForm` wyświetla formularz umożliwiający użytkownikowi
  * dodanie nowego zadania i opcjonalnego opisu. Dane nie są jeszcze podpinane
@@ -16,7 +15,7 @@ import "../App.css";
  */
 export default function AddTaskForm() {
   const [taskTitle, setTaskTitle] = useState("");
-  const [taskBody, setBodyTitle] = useState("");
+  const [taskBody, setTaskBody] = useState("");
 
   /**
    * Obsługuje zdarzenie wysłania formularza.
@@ -26,8 +25,7 @@ export default function AddTaskForm() {
    */
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setTaskTitle("TEST");
-    setBodyTitle("TEST11");
+
     console.log(taskTitle);
     console.log(taskBody);
   };
@@ -42,19 +40,27 @@ export default function AddTaskForm() {
           Wpisz zadanie
         </label>
         <input
+          value={taskTitle}
           type="text"
           name="task-title"
           id="user-new-task"
           className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setTaskTitle(e.target.value);
+          }}
         />
         <label htmlFor="task-body" className="text-gray-700 font-medium">
           Wpisz opis zadania (opcjonalne)
         </label>
         <input
+          value={taskBody}
           type="text"
           name="task-title"
           id="user-new-body"
           className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setTaskBody(e.target.value);
+          }}
         />
         <input
           type="submit"
