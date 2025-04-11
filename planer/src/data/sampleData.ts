@@ -1,9 +1,22 @@
+/**
+ * Interfejs `Zadanie` opisuje strukturę pojedynczego zadania
+ * wykorzystywanego w aplikacji.
+ */
 export interface Zadanie {
+  /** Unikalny identyfikator zadania */
   id: number;
+  /** Tytuł zadania */
   tytul: string;
+  /** Szczegółowy opis zadania */
   opis: string;
+  /** Flaga określająca, czy zadanie zostało ukończone */
   wykonane: boolean;
 }
+
+/**
+ * Tablica przykładowych zadań do wyświetlenia w aplikacji.
+ * Służy jako dane testowe do komponentu `TaskList`.
+ */
 export const sampleData: Zadanie[] = [
   {
     id: 1,

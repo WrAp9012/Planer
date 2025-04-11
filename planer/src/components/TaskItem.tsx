@@ -1,10 +1,32 @@
+/**
+ * Interfejs reprezentujący pojedyncze zadanie.
+ */
 interface task {
+  /** Unikalny identyfikator zadania */
   id: number;
+  /** Tytuł zadania */
   title: string;
+  /** Opcjonalny opis zadania */
   body?: string;
+  /** Flaga oznaczająca, czy zadanie zostało ukończone */
   isDone: boolean;
 }
 
+/**
+ * Komponent `TaskItem` wyświetla pojedyncze zadanie w formie karty.
+ * Pokazuje tytuł, opcjonalny opis oraz status ukończenia.
+ *
+ * @component
+ * @param {task} props - Obiekt właściwości zadania
+ * @param {number} props.id - Unikalny identyfikator zadania
+ * @param {string} props.title - Tytuł zadania
+ * @param {string} [props.body] - Opcjonalny opis zadania
+ * @param {boolean} props.isDone - Flaga ukończenia zadania
+ * @returns {JSX.Element} Karta zadania
+ *
+ * @example
+ * <TaskItem id={1} title="Nauka Reacta" body="Przerobić komponenty" isDone={false} />
+ */
 export default function TaskItem({ id, title, body, isDone }: task) {
   return (
     <>

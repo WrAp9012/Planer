@@ -1,5 +1,15 @@
 import "../App.css";
 
+/**
+ * Header component wyświetla nagłówek aplikacji z gradientowym tłem,
+ * tytułem i podtytułem. Używany jako górna część interfejsu użytkownika.
+ *
+ * @component
+ * @example
+ * return (
+ *   <Header />
+ * )
+ */
 export default function Header() {
   return (
     <>
