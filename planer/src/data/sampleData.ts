@@ -1,38 +1,50 @@
-/**
- * Interfejs `Zadanie` opisuje strukturę pojedynczego zadania
- * wykorzystywanego w aplikacji.
- */
-export interface Zadanie {
-  /** Unikalny identyfikator zadania */
-  id: number;
-  /** Tytuł zadania */
-  tytul: string;
-  /** Szczegółowy opis zadania */
-  opis?: string;
-  /** Flaga określająca, czy zadanie zostało ukończone */
-  wykonane: boolean;
-}
+// types/TaskType.ts
 
 /**
- * Tablica przykładowych zadań do wyświetlenia w aplikacji.
- * Służy jako dane testowe do komponentu `TaskList`.
+ * Reprezentuje pojedyncze zadanie na liście.
  */
-export const sampleData: Zadanie[] = [
+export interface TaskType {
+  id: number;
+  title: string;
+  body?: string;
+  isDone: boolean;
+}
+
+export const sampleData: TaskType[] = [
   {
     id: 1,
-    tytul: "Grawitacja ptaka",
-    opis: "Ptak powinien opadać, jeśli gracz nie klika – dodaj efekt grawitacji.",
-    wykonane: true,
+    title: "Nauka Reacta",
+    body: "Przerobić komponenty funkcyjne i stan",
+    isDone: false,
   },
   {
     id: 2,
-    tytul: "Generowanie rur",
-    wykonane: false,
+    title: "Zrobić zadanie z matmy",
+    body: "Zadanie 5 ze strony 123",
+    isDone: true,
   },
   {
     id: 3,
-    tytul: "Zliczanie punktów",
-    opis: "Za każdym razem, gdy ptak minie rurę, gracz powinien otrzymać 1 punkt.",
-    wykonane: false,
+    title: "Przeczytać artykuł o TypeScript",
+    body: "Na blogu twórców Reacta",
+    isDone: false,
+  },
+  {
+    id: 4,
+    title: "Ćwiczenia na siłowni",
+    body: "Trening FBW + kardio",
+    isDone: false,
+  },
+  {
+    id: 5,
+    title: "Napisać wpis na bloga",
+    body: "Temat: Jak działa useEffect w React",
+    isDone: true,
+  },
+  {
+    id: 6,
+    title: "Odpoczynek 🧘‍♂️",
+    body: "Medytacja lub krótki spacer",
+    isDone: false,
   },
 ];

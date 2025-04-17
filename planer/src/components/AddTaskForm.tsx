@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../App.css";
+import { sampleData } from "../data/sampleData";
+import TaskList from "./TaskList";
 
 // TODO: Return do some way the data from user (Add the new list item)
 /**
@@ -26,11 +28,18 @@ export default function AddTaskForm() {
    */
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(taskTitle);
-    console.log(taskBody);
+    let id = 4;
+    sampleData.push({
+      id: id,
+      tytul: taskTitle,
+      opis: taskBody,
+      wykonane: false,
+    });
+    TaskList();
 
     setTaskTitle("");
     setTaskBody("");
+    id += 1;
   };
 
   return (
